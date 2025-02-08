@@ -1,0 +1,59 @@
+.recovery {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+
+    .recovery__area {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        div {
+          width: 80%;
+          max-width: 500px;
+    
+          h1 {
+            margin-bottom: 20px;
+            font-size: 1.9rem;
+          }
+    
+          form {
+            display: flex;
+            flex-direction: column;
+    
+            label {
+              font-size: 1.2rem;
+              font-weight: 600;
+              margin: 40px 0 10px;
+            }
+    
+            input {
+              border: #cbc1c1 solid 1px;
+              border-radius: 5px;
+              padding: 15px 20px;
+              font-size: 1rem;
+            }
+    
+            button {
+              background: #C5291C;
+              border: none;
+              color: #fff;
+              font-size: 1.2rem;
+              margin-top: 30px;
+              padding: 15px;
+              font-weight: 500;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+    
+            a {
+              text-align: center;
+              margin-top: 20px;
+              text-decoration: none;
+              color: #323232;
+            }
+          }
+        }
+      }
+}
