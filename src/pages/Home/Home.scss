@@ -1,48 +1,47 @@
 .home {
-  display: grid;
-  grid-template-columns: 30% 70%;
+  display: flex;
+  width: 100vw;
   height: 100vh;
-  background-color: #f6f6f6;
+  background-color: #f5f7f9;
   padding: 20px;
+  gap: 30px;
 
   .home__buttons {
-    padding-right: 20px;
+    width: 300px;
 
     h1 {
-      background-color: #fff;
-      padding: 10px 20px;
-      border-radius: 15px;
-      font-size: 1.1rem;
-      -webkit-box-shadow: 0px 0px 12px 0px rgba(214, 214, 214, 0.409);
-      -moz-box-shadow: 0px 0px 12px 0px rgba(214, 214, 214, 0.459);
-      box-shadow: 0px 0px 12px 0px rgba(214, 214, 214, 0.469);
-    }
-    span {
-      display: block;
-      color: #aeb1ba;
-      padding: 20px 0 10px 20px;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 1.5rem;
+      color: #34343d;
+      font-weight: 600;
+      border-bottom: solid 3px #ebedee;
     }
 
     ul {
+      margin-top: 30px;
       list-style-type: none;
-      font-size: 1rem;
-      color: #757575;
+      font-size: 1.1rem;
+      color: #5e6064;
       display: flex;
       flex-direction: column;
       gap: 5px;
 
       .home__buttons__menu-item {
-        background-color: #c5291c;
-        color: #ffffff;
+        background-color: #ffffff;
+        color: #48494b;
+        -webkit-box-shadow: 0px 0px 1px 1px rgba(184, 184, 184, 1);
+        -moz-box-shadow: 0px 0px 1px 1px rgba(184, 184, 184, 1);
+        box-shadow: 0px 0px 1px 1px rgba(184, 184, 184, 1);
 
         svg path {
-          stroke: #fff !important;
+          stroke: #48494b !important;
         }
       }
 
       li {
         padding: 10px 20px;
-        border-radius: 15px;
+        border-radius: 10px;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -51,25 +50,26 @@
         transition: 300ms all;
 
         &:hover {
-          background-color: #c5291c;
-          color: #ffffff;
-          -webkit-box-shadow: 0px 0px 12px 0px rgba(214, 214, 214, 0.471);
-          -moz-box-shadow: 0px 0px 12px 0px rgba(214, 214, 214, 0.47);
-          box-shadow: 0px 0px 12px 0px rgba(214, 214, 214, 0.469);
+          background-color: #fff;
+          color: #48494b;
+          -webkit-box-shadow: 0px 0px 1px 1px rgba(184, 184, 184, 1);
+          -moz-box-shadow: 0px 0px 1px 1px rgba(184, 184, 184, 1);
+          box-shadow: 0px 0px 1px 1px rgba(184, 184, 184, 1);
         }
 
         &:hover > svg path {
-          stroke: #fff !important;
+          stroke: #48494b !important;
         }
 
         svg {
-          max-width: 25px;
+          max-width: 30px;
         }
       }
     }
   }
 
   .home__details {
+    width: 100%;
     background-color: #ffffff;
     border-radius: 15px;
     -webkit-box-shadow: 0px 0px 12px 0px rgba(214, 214, 214, 0.471);

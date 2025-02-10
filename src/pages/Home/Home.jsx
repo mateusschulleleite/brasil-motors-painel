@@ -3,6 +3,7 @@ import { Navigate } from "react-router";
 import { auth } from "../../firebase/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 import "./Home.scss";
+import Storage from "../../components/Storage/Storage";
 
 export default function Home() {
   const [userLoggedIn, setUserLoggedIn] = useState(null);
@@ -31,7 +32,7 @@ export default function Home() {
 
   const renderContent = () => {
     if (activeComponent === "estoque") {
-      return <h1>📦 Página de Estoque</h1>;
+      return <Storage />;
     } else if (activeComponent === "whatsapp") {
       return <h1>💰 Página de Vendas</h1>;
     } else if (activeComponent === "relatorios") {
@@ -50,9 +51,8 @@ export default function Home() {
       <div className="home">
         <div className="home__buttons">
           <h1>Brasil Motors</h1>
-          <span>Menu</span>
           <ul>
-            <li className="home__buttons__menu-item" value="estoque" onClick={(e) => handleClickMenuItem(e)}>
+            <li className="" value="estoque" onClick={(e) => handleClickMenuItem(e)}>
               <svg
                 viewBox="0 0 24 24"
                 fill="none"

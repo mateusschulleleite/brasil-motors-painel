@@ -1,0 +1,21 @@
+.storage {
+    padding: 20px;
+
+    h2 {
+        color: #282834;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+
+        tr {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25% ;
+        }
+
+        
+        
+    }
+}
