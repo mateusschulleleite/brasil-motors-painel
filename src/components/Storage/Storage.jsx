@@ -25,29 +25,26 @@ export default function Storage() {
   return (
     <div className="storage">
       <h2>Estoque</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Preço</th>
-            <th>Ano Fabricação</th>
-            <th>Ano Modelo</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div className="storage__list">
+        <ul className="storage__list-header">
+          <li>Nome</li>
+          <li>Preço</li>
+          <li>Ano Fabricação</li>
+          <li>Ano Modelo</li>
+        </ul>
+        <ul className="storage__list-items">
           {carros.map((carro, index) => {
             return (
-              <tr key={index}>
-                <td>{carro.nome}</td>
-                <td>{carro.preco}</td>
-                <td>{carro.anoFabricacao}</td>
-                <td>{carro.anoModelo}</td>
-              </tr>
+              <li key={index}>
+                <span>{carro.nome}</span>
+                <span>{carro.preco}</span>
+                <span>{carro.anoFabricacao}</span>
+                <span>{carro.anoModelo}</span>
+              </li>
             );
           })}
-        </tbody>
-      </table>
+        </ul>
+      </div>
     </div>
   );
 }
