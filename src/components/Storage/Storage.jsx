@@ -1,7 +1,12 @@
+import AddEditCar from "../AddEditCar/AddEditCar";
 import "./Storage.scss";
 import PropTypes from "prop-types";
 
 export default function Storage({ storage }) {
+  
+  function addEditCar() {
+  }
+
   return (
     <div className="storage">
       <h2>Estoque</h2>
@@ -69,6 +74,7 @@ export default function Storage({ storage }) {
           </tbody>
         </table>
       </div>
+      {addEditCar()}
     </div>
   );
 }

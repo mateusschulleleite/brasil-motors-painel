@@ -1,0 +1,48 @@
+.addeditcar {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+
+    form {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        gap: 50px;
+
+        fieldset {
+            border: none;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            width: 100%;
+
+            label {
+                color: #606060;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            input {
+                background-color: #F5F6FA;
+                border: none;
+                padding: 16px 18px;
+                border-radius: 4px;
+                width: 100%;
+                box-sizing: border-box;
+
+                &::placeholder {
+                    color: #A6A6A6;
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+}
