@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router";
-import { auth } from "../../firebase/firebaseConfig";
+import { auth, db } from "../../firebase/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 import "./Home.scss";
 import Storage from "../../components/Storage/Storage";
+import { collection, getDocs } from "firebase/firestore";
 
 export default function Home() {
   const [userLoggedIn, setUserLoggedIn] = useState(null);
@@ -30,9 +31,29 @@ export default function Home() {
     setActiveComponent(value);
   }
 
+  const [carros, setCarros] = useState([]);
+
+  useEffect(() => {
+    const fetchCarros = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "estoque"));
+        const carrosList = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setCarros(carrosList);
+      } catch (error) {
+        console.error("Erro ao buscar carros:", error);
+      }
+    };
+
+    fetchCarros();
+  });
+
+
   const renderContent = () => {
     if (activeComponent === "estoque") {
-      return <Storage />;
+      return <Storage storage={carros} />;
     } else if (activeComponent === "whatsapp") {
       return <h1>💰 Página de Vendas</h1>;
     } else if (activeComponent === "relatorios") {
