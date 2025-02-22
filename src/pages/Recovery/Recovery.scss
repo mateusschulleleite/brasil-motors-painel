@@ -1,4 +1,69 @@
 .recovery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 30px;
+
+  .login__image {
+    display: none;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .recovery__area {
+    width: 100%;
+
+    div {
+
+      span {
+        margin: 20px 0;
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin: 40px 0 10px;
+        }
+
+        input {
+          border: #cbc1c1 solid 1px;
+          border-radius: 5px;
+          padding: 15px 20px;
+          font-size: 1rem;
+        }
+
+        button {
+          background: #c5291c;
+          border: none;
+          color: #fff;
+          font-size: 1.2rem;
+          margin-top: 30px;
+          padding: 15px;
+          font-weight: 500;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        a {
+          text-align: center;
+          margin-top: 20px;
+          text-decoration: none;
+          color: #323232;
+        }
+      }
+    }
+  }
+  /*
     display: grid;
     grid-template-columns: 50% 50%;
     height: 100vh;
@@ -56,4 +121,6 @@
           }
         }
       }
+
+      */
 }

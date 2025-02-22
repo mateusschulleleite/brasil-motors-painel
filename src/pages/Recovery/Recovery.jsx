@@ -5,6 +5,7 @@ import Label from "../../components/Label/Label";
 import Input from "../../components/Input/Input";
 import { Link } from "react-router";
 import { resetPassword } from "../../firebase/authService";
+import Logo from "../../components/Logo/Logo";
 
 export default function Recovery() {
   const [email, setEmail] = useState("");
@@ -22,9 +23,10 @@ export default function Recovery() {
   return (
     <div className="recovery">
       <LoginImage />
+      <h1><Logo /></h1>
       <div className="recovery__area">
         <div>
-          <h1>Recuperar acesso</h1>
+          <span>Recuperar acesso</span>
           <form
             onSubmit={(e) => {
               handleRecovery(e);
