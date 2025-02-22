@@ -7,6 +7,7 @@ import { auth } from "../../firebase/firebaseConfig";
 import Input from "../../components/Input/Input";
 import Label from "../../components/Label/Label";
 import LoginImage from "../../components/LoginImage/LoginImage";
+import Logo from "../../components/Logo/Logo";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -36,31 +37,34 @@ export default function Login() {
   if (userLoggedIn === false) {
     return (
       <div className="login">
+        <h1>
+          <Logo />
+        </h1>
         <LoginImage />
         <div className="login__area">
           <div>
-            <h1>Acesso ao painel</h1>
+            <span>Acesso ao painel</span>
             <form onSubmit={(e) => handleLogin(e)}>
-              <Label id='email' text='Email'/>
+              <Label id="email" text="Email" />
               <Input
                 required="true"
                 type="email"
                 placeholder="email@exemplo.com.br"
                 value={email}
-                id='email'
+                id="email"
                 inputState={setEmail}
               />
-              <Label id='password' text='Senha'/>
+              <Label id="password" text="Senha" />
               <Input
                 required="true"
                 type="password"
-                placeholder='Sua senha aqui'
+                placeholder="Sua senha aqui"
                 value={password}
-                id='password'
+                id="password"
                 inputState={setPassword}
               />
               <button type="login">Entrar</button>
-              <Link to='/recuperar-senha'>Esqueci a minha senha</Link>
+              <Link to="/recuperar-senha">Esqueci a minha senha</Link>
             </form>
           </div>
         </div>
