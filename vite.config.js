@@ -8,6 +8,8 @@ export default defineConfig({
     host: true,
     port: 5173,
     strictPort: true,
-    allowedHosts: 'bee5-168-0-17-128.ngrok-free.app'
+    allowedHosts: [
+      'c5cf-168-0-17-128.ngrok-free.app' // Adicione seu domínio do ngrok aqui
+    ]
   }
 })

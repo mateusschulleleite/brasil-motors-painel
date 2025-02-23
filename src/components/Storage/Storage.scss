@@ -1,8 +1,6 @@
 .storage {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 
   h2 {
     color: #202224;
@@ -12,8 +10,6 @@
 
   .storage__list {
     margin-top: 20px;
-    flex-grow: 1;
-    overflow: scroll;
 
     ul {
       height: 100%;
