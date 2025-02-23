@@ -246,8 +246,8 @@ export default function Home() {
             </div>
           </nav>
         </div>
-        <div className="home__informations">
-          <div className="home__informations-data">{renderContent()}</div>
+        <div className="dashboard__informations">
+          <div className="dashboard__informations-data">{renderContent()}</div>
         </div>
       </div>
     );
