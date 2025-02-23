@@ -49,22 +49,22 @@ export default function Home() {
 
   const [carros, setCarros] = useState([]);
 
-  useEffect(() => {
-    const fetchCarros = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "estoque"));
-        const carrosList = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setCarros(carrosList);
-      } catch (error) {
-        console.error("Erro ao buscar carros:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchCarros = async () => {
+  //     try {
+  //       const querySnapshot = await getDocs(collection(db, "estoque"));
+  //       const carrosList = querySnapshot.docs.map((doc) => ({
+  //         id: doc.id,
+  //         ...doc.data(),
+  //       }));
+  //       setCarros(carrosList);
+  //     } catch (error) {
+  //       console.error("Erro ao buscar carros:", error);
+  //     }
+  //   };
 
-    fetchCarros();
-  });
+  //   fetchCarros();
+  // });
 
   const renderContent = () => {
     if (activeComponent === "estoque") {
