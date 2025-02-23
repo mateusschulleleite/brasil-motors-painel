@@ -1,6 +1,8 @@
 .dashboard {
   background-color: #f5f6fa;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .dashboard__menu {
     background-color: #fff;
@@ -119,9 +121,12 @@
     width: 100%;
     font-weight: bold;
     font-size: 14px;
+    flex-grow: 1;
+    overflow: hidden;
 
     .dashboard__informations-data {
       padding: 20px 20px;
+      height: 100%;
     }
   }
 }

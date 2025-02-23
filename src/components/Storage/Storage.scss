@@ -1,98 +1,55 @@
 .storage {
-  position: relative;
-  
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
   h2 {
     color: #202224;
     font-weight: bold;
     font-size: 32px;
   }
 
-  .storage__buttons {
-    margin-top: 23px;
+  .storage__list {
+    margin-top: 20px;
+    flex-grow: 1;
+    overflow: scroll;
 
     ul {
+      height: 100%;
       display: flex;
+      flex-direction: column;
+      gap: 20px;
 
       li {
-        background-color: #f9f9fb;
-        color: #c5291c;
-        font-size: 14px;
-        padding: 27px 43px;
-        border: #b9b9b9 solid 1px;
-        transition: 150ms all;
         display: flex;
-        align-items: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
         gap: 20px;
+        height: 160px;
 
-        svg {
-          max-width: 25px;
-          min-width: 25px;
+        .storage__list-image {
+          max-width: 40%;
+          display: flex;
+          align-items: center;
         }
 
-        &:hover {
-          border: #c5291c solid 1px;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-  .storage__list {
-    margin-top: 28px;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 10px;
-    border: solid #b9b9b9 1px;
-
-    table {
-      width: 100%;
-      text-align: left;
-
-      thead {
-        background-color: #fcfdfd;
-        text-transform: uppercase;
-        color: #202224;
-        font-weight: 900;
-
-        tr {
-
-          th {
-            padding: 15px 31px;
+        .storage__list-details {
+          h3 {
+            font-size: 20px;
+            height: 30px;
+            overflow: hidden;
+          }
+          
+          p {
+            color: #2e3134;
+            margin: 2px 0;
+          }
+          .storage__list-details-preco {
+            font-size: 20px;
           }
         }
-      }
-
-      tbody {
-        tr {
-          td {
-            padding: 15px 31px;
-          }
-        }
-      }
-
-      th:nth-child(1),
-      td:nth-child(1) {
-        width: 20%;
-      }
-      th:nth-child(2),
-      td:nth-child(2) {
-        width: 15%;
-      }
-      th:nth-child(3),
-      td:nth-child(3) {
-        width: 15%;
-      }
-      th:nth-child(4),
-      td:nth-child(4) {
-        width: 10%;
-      }
-      th:nth-child(5),
-      td:nth-child(5) {
-        width: 20%;
-      }
-      th:nth-child(6),
-      td:nth-child(6) {
-        width: 20%;
       }
     }
   }
